@@ -8,8 +8,12 @@ body {
     margin: 0 auto;
     width: 1100px;
     display: grid;
-    grid-template-rows: 115px 425px auto 50px;
-    grid-template-columns: 100px 300px 300px 300px 100px;
+    grid-template-rows: minmax(50px, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'menu menu menu menu menu'
+                         'banner banner banner banner banner'
+                         'empty fade nivo bonus empty'
+                         'footer footer footer footer footer';
 }
 
 nav {
