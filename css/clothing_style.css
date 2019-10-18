@@ -1,0 +1,40 @@
+/* styling clothing page */
+
+.grid-main {
+    display: grid;
+    grid-template-areas: 'emptyleft clothing-one clothing-two clothing-three emptyright'
+                         'emptyleft clothing-one-kop clothing-two-kop clothing-three-kop emptyright'
+                         'emptyleft clothing-one-sub clothing-two-sub clothing-three-sub emptyright';
+    grid-template-rows: minmax(50px, auto);
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.empty-left { grid-area: emptyleft; }
+.empty-right { grid-area: emptyright;}
+.clothing-one { grid-area: clothing-one; }
+.clothing-two { grid-area: clothing-two; }
+.clothing-three { grid-area: clothing-three; }
+.clothing-one-kop { grid-area: clothing-one-kop; }
+.clothing-two-kop { grid-area: clothing-two-kop; }
+.clothing-three-kop { grid-area: clothing-three-kop; }
+.clothing-one-sub { grid-area: clothing-one-sub; }
+.clothing-two-sub { grid-area: clothing-two-sub; }
+.clothing-three-sub { grid-area: clothing-three-sub; }
+
+.clothing-one, .clothing-two, .clothing-three {
+    margin: 15px;
+}
+
+.clothing-one-kop, .clothing-two-kop, .clothing-three-kop {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 10px 15px;
+    padding: 0;
+}
+
+.clothing-one-sub, .clothing-two-sub, .clothing-three-sub {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 5px 15px 25px 15px;
+    padding: 0;
+}
