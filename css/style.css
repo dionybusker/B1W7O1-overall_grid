@@ -39,8 +39,8 @@ header img {
 
 header h1 {
     font-size: 26px;
-    line-height: 22px;
-    margin: 50px 0 0 0;
+    line-height: 30px;
+    margin: 40px 0 0 0;
     color: #fff;
     font-weight: 100;
 }
@@ -80,7 +80,7 @@ main {
 .bonus-sub { grid-area: bonussub; }
 
 .fade, .nivo, .bonus {
-    margin: 0 25px;
+    margin: 15px;
 }
 
 .fade-kop, .nivo-kop, .bonus-kop {
@@ -88,13 +88,8 @@ main {
     line-height: 22px;
 }
 
-.fade-kop, .bonus-kop {
-    margin: 15px 25px;
-    padding: 0;
-}
-
-.nivo-kop {
-    margin: 15px 0;
+.fade-kop, .nivo-kop, .bonus-kop {
+    margin: 10px 15px;
     padding: 0;
 }
 
@@ -103,13 +98,8 @@ main {
     line-height: 22px;
 }
 
-.fade-sub, .bonus-sub {
-    margin: 10px 25px;
-    padding: 0;
-}
-
-.nivo-sub {
-    margin: 10px 0;
+.fade-sub, .nivo-sub, .bonus-sub {
+    margin: 5px 15px;
     padding: 0;
 }
 
@@ -120,7 +110,7 @@ footer {
 }
 
 footer p {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     color: #fff;
 }
