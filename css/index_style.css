@@ -1,0 +1,40 @@
+/* grid voor enkel de main */
+
+.grid-main {
+    display: grid;
+    grid-template-areas: 'emptyleft fade nivo bonus emptyright'
+                         'emptyleft fadekop nivokop bonuskop emptyright'
+                         'emptyleft fadesub nivosub bonussub emptyright';
+    grid-template-rows: minmax(50px, auto);
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.empty-left { grid-area: emptyleft; }
+.empty-right { grid-area: emptyright;}
+.fade { grid-area: fade; }
+.nivo { grid-area: nivo; }
+.bonus { grid-area: bonus; }
+.fade-kop { grid-area: fadekop; }
+.nivo-kop { grid-area: nivokop; }
+.bonus-kop { grid-area: bonuskop; }
+.fade-sub { grid-area: fadesub; }
+.nivo-sub { grid-area: nivosub; }
+.bonus-sub { grid-area: bonussub; }
+
+.fade, .nivo, .bonus {
+    margin: 15px;
+}
+
+.fade-kop, .nivo-kop, .bonus-kop {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 10px 15px;
+    padding: 0;
+}
+
+.fade-sub, .nivo-sub, .bonus-sub {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 5px 15px 25px 15px;
+    padding: 0;
+}
