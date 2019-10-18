@@ -1,52 +1,35 @@
-/* styling */
-
 body {
     font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* grid voor de gehele pagina */
 .grid-container {
-    margin: 0 auto;
     width: 1100px;
+    margin: 0 auto;
     display: grid;
-    grid-template-rows: 115px 425px auto 50px;
-    grid-template-columns: 100px 300px 300px 300px 100px;
+    grid-template-areas: 'header'
+                         'banner'
+                         'main'
+                         'footer';
+    grid-template-rows: minmax(50px, auto);
+    grid-template-columns: repeat(1, 1fr);
 }
+
+nav { grid-area: header; }
+header { grid-area: banner; }
+main { grid-area: main; }
+footer { grid-area: footer; }
 
 nav {
     background-image: url(../img/header_bg.png);
-    width: 1100px;
-    grid-row: 1/2;
-    grid-column: 1/4;
-}
-
-nav img {
-    float: left;
-    margin: 10px 10px 10px 50px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 50px;
-    text-align: right;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: rgb(69, 97, 123);
-    font-weight: bold;
+    height: 115px;
 }
 
 header {
     background-image: url(../img/banner_bg.png);
-    width: 1100px;
-    grid-row: 2/3;
-    grid-column: 1/4;
+    height: 425px;
 }
 
 header img {
@@ -59,7 +42,7 @@ header h1 {
     line-height: 22px;
     margin: 50px 0 0 0;
     color: #fff;
-    font-weight: 100;    
+    font-weight: 100;
 }
 
 header p {
@@ -69,66 +52,75 @@ header p {
     color: #fff;
 }
 
+/* styling main */
 main {
-    margin: 0 auto;
-    width: 907px;
-    grid-row: 3/4;
-    grid-column: 1/6;
+    height: auto;
 }
 
-/* .images {
-    margin: 0 auto;
-    width: 900px;
-} */
-
-.empty-side1 {
-    grid-row: 3/4;
-    grid-column: 1/2;
+/* grid voor enkel de main */
+.grid-main {
+    display: grid;
+    grid-template-areas: 'emptyleft fade nivo bonus emptyright'
+                         'emptyleft fadekop nivokop bonuskop emptyright'
+                         'emptyleft fadesub nivosub bonussub emptyright';
+    grid-template-rows: minmax(50px, auto);
+    grid-template-columns: repeat(5, 1fr);
 }
 
-.grid-img-fade {
-    grid-row: 3/4;
-    grid-column: 2/3;
-    /* margin-left: 100px; */
+.empty-left { grid-area: emptyleft; }
+.empty-right { grid-area: emptyright;}
+.fade { grid-area: fade; }
+.nivo { grid-area: nivo; }
+.bonus { grid-area: bonus; }
+.fade-kop { grid-area: fadekop; }
+.nivo-kop { grid-area: nivokop; }
+.bonus-kop { grid-area: bonuskop; }
+.fade-sub { grid-area: fadesub; }
+.nivo-sub { grid-area: nivosub; }
+.bonus-sub { grid-area: bonussub; }
+
+.fade, .nivo, .bonus {
+    margin: 0 25px;
 }
 
-main h2 {
+.fade-kop, .nivo-kop, .bonus-kop {
     font-size: 20px;
     line-height: 22px;
-    display: inline-block;
 }
 
-main p {
+.fade-kop, .bonus-kop {
+    margin: 15px 25px;
+    padding: 0;
+}
+
+.nivo-kop {
+    margin: 15px 0;
+    padding: 0;
+}
+
+.fade-sub, .nivo-sub, .bonus-sub {
     font-size: 14px;
     line-height: 22px;
-    display: inline-block;
 }
 
-.grid-text-fade, .grid-text-nivo, .grid-text-bonus {
-    width: 300px;
+.fade-sub, .bonus-sub {
+    margin: 10px 25px;
+    padding: 0;
 }
 
-.grid-img-nivo {
-    grid-row: 3/4;
-    grid-column: 3/4;
-}
-
-.grid-img-bonus {
-    grid-row: 3/4;
-    grid-column: 4/5;
-}
-
-.empty-side2 {
-    grid-row: 3/4;
-    grid-column: 5/6;
+.nivo-sub {
+    margin: 10px 0;
+    padding: 0;
 }
 
 footer {
     background-image: url(../img/footer_bg.png);
-    width: 1100px;
-    grid-row: 4/5;
-    grid-column: 1/4;
+    height: 50px;
+    margin: auto 0;
+}
+
+footer p {
+    font-size: 16px;
     text-align: center;
     color: #fff;
-    margin: auto 0;
 }
