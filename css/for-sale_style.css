@@ -1,0 +1,40 @@
+/* styling for-sale pages (cars and clothing) */
+
+.grid-main {
+    display: grid;
+    grid-template-areas: 'emptyleft for-sale-one for-sale-two for-sale-three emptyright'
+                         'emptyleft for-sale-one-kop for-sale-two-kop for-sale-three-kop emptyright'
+                         'emptyleft for-sale-one-sub for-sale-two-sub for-sale-three-sub emptyright';
+    grid-template-rows: minmax(50px, auto);
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.empty-left { grid-area: emptyleft; }
+.empty-right { grid-area: emptyright;}
+.for-sale-one { grid-area: for-sale-one; }
+.for-sale-two { grid-area: for-sale-two; }
+.for-sale-three { grid-area: for-sale-three; }
+.for-sale-one-kop { grid-area: for-sale-one-kop; }
+.for-sale-two-kop { grid-area: for-sale-two-kop; }
+.for-sale-three-kop { grid-area: for-sale-three-kop; }
+.for-sale-one-sub { grid-area: for-sale-one-sub; }
+.for-sale-two-sub { grid-area: for-sale-two-sub; }
+.for-sale-three-sub { grid-area: for-sale-three-sub; }
+
+.for-sale-one, .for-sale-two, .for-sale-three {
+    margin: 15px;
+}
+
+.for-sale-one-kop, .for-sale-two-kop, .for-sale-three-kop {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 10px 15px;
+    padding: 0;
+}
+
+.for-sale-one-sub, .for-sale-two-sub, .for-sale-three-sub {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 5px 15px 25px 15px;
+    padding: 0;
+}
