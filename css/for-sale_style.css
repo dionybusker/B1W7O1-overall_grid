@@ -41,7 +41,7 @@
 
 .grid-main img {
     max-width: 300px;
-    max-height: auto;
+    height: auto;
 }
 
 .grid-main ul {
