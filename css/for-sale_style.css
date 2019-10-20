@@ -38,3 +38,12 @@
     margin: 5px 15px 25px 15px;
     padding: 0;
 }
+
+.grid-main img {
+    max-width: 300px;
+    max-height: auto;
+}
+
+.grid-main ul {
+    list-style-type: none;
+}
